@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Passport</title>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/scripts/client.min.js"></script>
+  </head>
+  <body>
+    <h1>*Registration Portal*</h1>
+    <form action="/register" method="post">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" />
+        <!-- name = "username" is tied to our router.post db query request.body.username
+          and also tied to our passport.use - usernameField: 'username' on server.js
+          they have to match or they won't work-->
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <input type="submit" value="Register" />
+      </div>
+    </form>
